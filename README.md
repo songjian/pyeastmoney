@@ -5,7 +5,7 @@
 ```python
 from eastmoney.f10 import shareholder_research
 
-shareholder = shareholder_research(code="SH600161", date="2022-03-31")
+shareholder = shareholder_research(code="SH600161")
 
 print(shareholder)
 ```
