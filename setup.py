@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.1",
     author="sj",
     author_email="root@mail.codeorder.cn",
-    description="东方财富数据",
+    description="获取东方财富数据。",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/songjian/pyeastmoney",

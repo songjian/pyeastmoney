@@ -1,10 +1,11 @@
-# 东方财富网数据
+# 获取东方财富网数据的包
 
-# 例：从Eastmoney获得实际控制人
+## 例：从Eastmoney获得实际控制人
 
 ```python
-from eastmoney.eastmoney import F10
-a = F10()
-b=a.shareholder_research(code="SH600161", date="2022-03-31")
-b['sjkzr'][0]['HOLDER_NAME']
+from eastmoney.f10 import shareholder_research
+
+shareholder = shareholder_research(code="SH600161", date="2022-03-31")
+
+print(shareholder)
 ```
