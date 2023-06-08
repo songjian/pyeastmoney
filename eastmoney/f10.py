@@ -52,7 +52,20 @@ def shareholder_research(code, date=None) -> dict:
     r=requests.get(url, params=params, headers=headers)
     return json.loads(r.text)
 
-def zyzb():
+def zyzb(type: str = '0', code: str = 'SH603288') -> str:
+    """主要指标
+    
+    Keyword arguments:
+    type -- 类型，例如: '0'
+    code -- 股票代码，例如: SH603288
+
+    Returns:
+    主要指标
+    """
+    params = {
+        'type': type,
+        'code': code
+    }
     url="https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/ZYZBAjaxNew?type=0&code=SH603083"
     r=requests.get(url, headers=headers)
     return r.text
@@ -80,3 +93,24 @@ def zcfzb(code: str, dates: str = '2023-03-31,2022-12-31,2022-09-30,2022-06-30,2
     r=requests.get(url, params=params, headers=headers)
     return json.loads(r.text)
 
+def lrb(code: str, dates: str = '2023-03-31,2022-12-31,2022-09-30,2022-06-30,2022-03-31', companyType: str = '4') -> str:
+    """利润表
+    
+    Keyword arguments:
+    code -- 股票代码，例如: SH603288
+    dates -- 报告日期，例如: '2022-03-31,2021-12-31'
+    companyType -- 公司类型，例如: '4'
+
+    Returns:
+    利润表
+    """
+    params = {
+        'companyType': companyType,
+        'reportDateType': '0',
+        'reportType': '1',
+        'dates': dates,
+        'code': code
+    }
+    url="https://emweb.securities.eastmoney.com/PC_HSF10/NewFinanceAnalysis/lrbAjaxNew"
+    r = requests.get(url, params=params, headers=headers)
+    return json.loads(r.text)
