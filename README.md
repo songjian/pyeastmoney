@@ -15,9 +15,9 @@
 pip install pyeastmoney
 ```
 
-## 使用
+## 导入Python包使用
 
-### 获得实际控制人
+获得实际控制人
 
 ```python
 from eastmoney.f10 import shareholder_research
@@ -26,3 +26,10 @@ shareholder = shareholder_research(code="SH600161")
 
 print(shareholder)
 ```
+
+## 脚本
+
+提供了两个脚本，可以直接使用：
+
+- `download_lrb.py` 下载利润表数据
+- `download_zcfzb.py` 下载资产负债表数据

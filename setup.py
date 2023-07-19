@@ -20,6 +20,8 @@ setuptools.setup(
     ],
     install_requires=[
         'requests==2.30.0',
+        'pandas==1.3.5',
+        'tqdm==4.65.0',
         'beautifulsoup4==4.10.0',
         ],
     python_requires='>=3'
