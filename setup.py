@@ -5,9 +5,9 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pyeastmoney",
-    version="0.0.1",
+    version="0.1.0",
     author="sj",
-    author_email="root@mail.codeorder.cn",
+    author_email="724385768@qq.com",
     description="获取东方财富数据。",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -19,8 +19,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        'requests==2.27.1',
-        'pandas==1.3.5',
+        'requests==2.30.0',
         'beautifulsoup4==4.10.0',
         ],
     python_requires='>=3'

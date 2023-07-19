@@ -71,7 +71,7 @@ def zyzb(type: str = '0', code: str = 'SH603288') -> str:
     return r.text
 
 
-def zcfzb(code: str, dates: str = '2023-03-31,2022-12-31,2022-09-30,2022-06-30,2022-03-31') -> str:
+def zcfzb(code: str, dates: str = '2023-03-31,2022-12-31,2022-09-30,2022-06-30,2022-03-31', companyType: str = 4) -> str:
     """资产负债表
 
     Keyword arguments:
@@ -83,7 +83,7 @@ def zcfzb(code: str, dates: str = '2023-03-31,2022-12-31,2022-09-30,2022-06-30,2
     """
 
     params = {
-        'companyType': '4',
+        'companyType': companyType,
         'reportDateType': '0',
         'reportType': '1',
         'dates': dates,
